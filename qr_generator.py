@@ -20,7 +20,7 @@ def generate_qr_code(url,filename):
 st.set_page_config(page_title='QR Code Generator', page_icon='',layout='centered')
 st.image('images/qr.png', use_container_width=True)
 st.title('QR Code Generator')
-url = st.text.input('Enter the URL')
+url = st.text_input('Enter the URL')
 
 if st.button('Generate QR Code'):
     generate_qr_code(url, filename)
