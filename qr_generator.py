@@ -4,7 +4,7 @@ import streamlit as st
 filename = 'qr_codes/qr_code.png' #definicion donde se guardan los qr
 
 def generate_qr_code(url,filename):
-    qr = qrcode.QRcoed(
+    qr = qrcode.QRCode(
         version = 1,
         error_correction = qrcode.constants.ERROR_CORRECT_L,
         box_size=10,
@@ -18,7 +18,7 @@ def generate_qr_code(url,filename):
     
 #pag creation
 st.set_page_config(page_title='QR Code Generator', page_icon='',layout='centered')
-st.image('images/support.JPG', use_container_width=True)
+st.image('images/qr.png', use_container_width=True)
 st.title('QR Code Generator')
 url = st.text.input('Enter the URL')
 
